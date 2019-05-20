@@ -6,9 +6,12 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:38:47 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/20 12:04:53 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/20 15:49:56 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(char *str)
 {
