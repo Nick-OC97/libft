@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:46:15 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/20 16:05:31 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/20 16:44:26 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		main(int argc,char **argv)
 	free(strn);
 	ft_putstr(ft_strcpy(strd, str));
 	ft_putchar('\n');
-	ft_putnbr(ft_atoi(argv[1]));
+	if (argc == 2)
+		ft_putnbr(ft_atoi(argv[1]));
 	return(0);
 }
