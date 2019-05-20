@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   tester.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/17 13:21:38 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/20 09:31:43 by no-conne         ###   ########.fr       */
+/*   Created: 2019/05/20 08:46:15 by no-conne          #+#    #+#             */
+/*   Updated: 2019/05/20 09:32:43 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str)
-{
-	int i;
+#include "testh.h"
 
-	i = 0;
-	while (str[i] != '\0')
+int		main(int argc,char **argv)
+{
+	if (argc == 2)
 	{
-		ft_putchar(str[i]);
-		i++;
+		ft_putnbr(ft_atoi(argv[1]));
+		return (0);
 	}
+	else
+		return(0);
 }
