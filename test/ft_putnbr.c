@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testh.h                                            :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:29:34 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/20 12:38:30 by no-conne         ###   ########.fr       */
+/*   Created: 2019/05/20 08:39:08 by no-conne          #+#    #+#             */
+/*   Updated: 2019/05/20 11:06:17 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include "ft_putchar.c"
-#include "ft_putstr.c"
-#include "ft_strlen.c"
-#include "ft_strdup.c"
-#include "ft_strcpy.c"
-#include "ft_putnbr.c"
-#include "ft_atoi.c"
+void	ft_putnbr(int n)
+{
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	else if (n < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(-n);
+	}
+	else if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putchar((n % 10) + '0');
+	}
+	else
+		ft_putchar(n + '0');
+}
