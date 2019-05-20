@@ -6,11 +6,12 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:46:15 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/20 15:31:13 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/20 16:05:31 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 int		main(int argc,char **argv)
 {
