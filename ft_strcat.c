@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:57:20 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/21 10:27:20 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/21 12:15:20 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	size_t i;
-	int n;
+	size_t	i;
+	int		n;
 
 	i = ft_strlen(dest);
 	n = 0;
@@ -25,5 +25,6 @@ char	*ft_strcat(char *dest, const char *src)
 		i++;
 		n++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
