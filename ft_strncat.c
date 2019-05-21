@@ -6,11 +6,10 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:37:08 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/21 10:29:17 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/21 10:56:02 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strncat(char *dest, const char *src, size_t n)

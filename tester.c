@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:46:15 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/21 10:33:38 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/21 11:01:46 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ int		main(int argc,char **argv)
 	ft_putchar('\n');   // test strncat
 
 	ft_putnbr((int)ft_strlcat(catld, catl, 3));
+	ft_putchar('\n');   // test strlcat
 	return(0);
 }
