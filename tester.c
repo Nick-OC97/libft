@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:46:15 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/21 10:05:46 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/21 10:33:38 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int		main(int argc,char **argv)
 	char strt[7];
 	char cat[] = "hello";
 	char catn[10] ="nice";
+	char catl[] = "hello";
+	char catld[10] = "nice";
 
 	strn =ft_strdup(str);
 	ft_putstr(strn);
@@ -43,5 +45,7 @@ int		main(int argc,char **argv)
 
 	ft_putstr(ft_strncat(catn, cat, 3));
 	ft_putchar('\n');   // test strncat
+
+	ft_putnbr((int)ft_strlcat(catld, catl, 3));
 	return(0);
 }
