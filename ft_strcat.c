@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 15:42:19 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/21 09:05:50 by no-conne         ###   ########.fr       */
+/*   Created: 2019/05/21 08:57:20 by no-conne          #+#    #+#             */
+/*   Updated: 2019/05/21 09:00:56 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H_
-#define LIBFT_H_
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
+char	*ft_strcat(char *dest, const char *src)
+{
+	int i;
+	int n;
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putnbr(int n);
-int		ft_atoi(char *str);
-char	*ft_strcpy(char *dest, char *src);
-char 	*ft_strdup(char *str);
-int		ft_strlen(char *str);
-char	*ft_strncpy(char *dest, const char *src, int n);
-char	*ft_strcat(char *dest, const char *src);
-
-#endif
+	i = ft_strlen(dest);
+	n = 0;
+	while (src[n] != '\0')
+	{
+		dest[i] = src[n];
+		i++;
+		n++;
+	}
+	return (dest);
+}
