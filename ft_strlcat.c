@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:37:08 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/21 12:16:19 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:03:04 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,21 @@ size_t		ft_strlcat(char *dest, const char *src, size_t n)
 
 	i = ft_strlen(dest);
 	x = 0;
-	while (x <= n)
+	z = i;
+	z += ft_strlen(src);
+	if (n > i)
 	{
-		while (src && x < n)
+		while (i < (n - 1) && src[x] != '\0')
 		{
 			dest[i] = src[x];
 			i++;
 			x++;
 		}
 		dest[i] = '\0';
-		i++;
-		x++;
 	}
-	z = ft_strlen(dest);
+	else
+	{
+		z = ft_strlen(src) + n;
+	}
 	return (z);
 }

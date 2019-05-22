@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:10:59 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/21 12:30:31 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/22 10:09:10 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strchr(const char *str, int c)
 
 	x = NULL;
 	i = 0;
-	while (str)
+	while (str[i] != '\0')
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 		{
 			*x = str[i];
 			return (x);
@@ -30,3 +30,5 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
+
+
