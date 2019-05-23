@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:42:19 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/23 11:16:26 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/23 13:22:36 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ void		*ft_memset(void *str, int c, size_t n);
 void		ft_bzero(void *str, size_t n);
 void		*ft_memcpy(void *str1, const void *str2, size_t n);
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void		*ft_memmove(void *str1, const void *str2, size_t n);
+void		*ft_memchr(const void *str, int c, size_t n);
 
 #endif
