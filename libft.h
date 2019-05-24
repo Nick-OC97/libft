@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:42:19 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/24 14:59:50 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/24 15:34:43 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,12 @@ char		*ft_strrchr(const char *str, int c);
 char		*ft_strnstr(const char *haystack, const char *needlem, size_t n);
 int			ft_strcmp(const char *str1, const char *str2);
 int			ft_strncmp(const char *str1, const char *str2, size_t n);
+int			ft_isalpha(int c);
+int			ft_isdigit(int c);
+int			ft_isalnum(int c);
+int			ft_isascii(int c);
+int			ft_isprint(int c);
+int			ft_toupper(int c);
+int			ft_tolower(int c);
 
 #endif
