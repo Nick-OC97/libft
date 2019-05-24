@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:42:19 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/23 13:22:36 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/24 11:00:16 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ void		*ft_memcpy(void *str1, const void *str2, size_t n);
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void		*ft_memmove(void *str1, const void *str2, size_t n);
 void		*ft_memchr(const void *str, int c, size_t n);
+int			ft_memcmp(const void *str1, const void *str2, size_t n);
+char		*ft_strrchr(const char *str, int c);
 
 #endif
