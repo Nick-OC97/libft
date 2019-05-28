@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:42:19 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/27 13:17:43 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/28 15:27:28 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <string.h>
 
 void		ft_putchar(char c);
-void		ft_putstr(char *str);
+void		ft_putstr(char const *str);
 void		ft_putnbr(int n);
 int			ft_atoi(const char *str);
 char		*ft_strcpy(char *dest, const char *src);
@@ -63,5 +63,10 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1);
 char		**ft_strsplit(char const *s, char c);
+char		*ft_itoa(int n);
+void		ft_putchar_fd(char const c, int fd);
+void		ft_putstr_fd(char const *s, int fd);
+void		ft_putendl(char const *s);
+void		ft_putendl_fd(char const *s, int fd);
 
 #endif
