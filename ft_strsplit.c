@@ -6,34 +6,38 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:30:26 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/27 13:46:11 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/05/29 12:15:46 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**sizer(int i, char c, char const *s)
+static int	counter(char *s, char c, int n)
 {
-	int		cnt;
-	char	**new;
-
-	cnt = 0;
-	while (s[i] != '\0')
+	while (s[n] != c && s[n] != '\0')
 	{
-		if (s[i] == c && s[i + 1] != c)
-			cnt++;
-		i++;
+		n++;
 	}
-	if (!(new = (char **)malloc(sizeof(char *) * cnt + 1)))
-		return (NULL);
-	return (new);
+	return (n);
 }
 
-static int	checker(int i, char c)
+static int	word_count(char c, char *s)
 {
-	while (i != c)
+	int		cnt;
+	int		i;
+
+	cnt = 0;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+		{
+			cnt++;
+			i = counter(s, c, i) - 1;
+		}
 		i++;
-	return (i - 1);
+	}
+	return (cnt);
 }
 
 char		**ft_strsplit(char const *s, char c)
@@ -42,20 +46,22 @@ char		**ft_strsplit(char const *s, char c)
 	int		n;
 	int		x;
 	char	**new;
+	char	*str;
 
 	i = 0;
 	x = 0;
-	new = sizer(i, c, s);
-	i = 0;
-	while (s[i] != '\0')
+	str = ft_strtrim(s);
+	if (!(new = (char **)malloc(sizeof(char *) * (word_count(c, str) + 1))))
+		return (NULL);
+	while (str[i] != '\0')
 	{
-		n = i;
-		if (s[i] == c && s[i + 1] != c)
+		if (str[i] != c)
 		{
-			n++;
-			checker(n, c);
-			new[x] = ft_strsub(s, i, n - i + 1);
+			n = counter(str, c, i);
+			if (n > 0)
+				new[x] = ft_strsub(str, i, n - i);
 			x++;
+			i = n;
 		}
 		i++;
 	}
