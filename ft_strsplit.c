@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:30:26 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/29 12:15:46 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/06/03 16:51:11 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static int	counter(char *s, char c, int n)
 	{
 		n++;
 	}
+	if (s[n] == '\0')
+		return (n - 1);
 	return (n);
 }
 
@@ -33,7 +35,7 @@ static int	word_count(char c, char *s)
 		if (s[i] != c)
 		{
 			cnt++;
-			i = counter(s, c, i) - 1;
+			i = counter(s, c, i);
 		}
 		i++;
 	}
@@ -50,20 +52,24 @@ char		**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	x = 0;
-	str = ft_strtrim(s);
-	if (!(new = (char **)malloc(sizeof(char *) * (word_count(c, str) + 1))))
-		return (NULL);
-	while (str[i] != '\0')
+	if (s && c)
 	{
-		if (str[i] != c)
+		str = (char *)s;
+		if (!(new = (char **)malloc(sizeof(char *) * (word_count(c, str)))))
+			return (NULL);
+		while (str[i] != '\0')
 		{
-			n = counter(str, c, i);
-			if (n > 0)
-				new[x] = ft_strsub(str, i, n - i);
-			x++;
-			i = n;
+			if (str[i] != c)
+			{
+				n = counter(str, c, i);
+				if (n > 0)
+					new[x] = ft_strsub(str, i, n - i);
+				x++;
+				i = n;
+			}
+			i++;
 		}
-		i++;
+		return (new);
 	}
-	return (new);
+	return (NULL);
 }

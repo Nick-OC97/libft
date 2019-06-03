@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 09:01:39 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/27 09:03:28 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/06/03 14:08:35 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 void	ft_strclr(char *s)
 {
 	size_t n;
-
-	n = ft_strlen(s);
-	memset(s, '\0', n);
+	if (s)
+	{
+		n = ft_strlen(s);
+		memset(s, '\0', n);
+	}
 }
