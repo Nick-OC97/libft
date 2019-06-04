@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 14:56:08 by no-conne          #+#    #+#             */
-/*   Updated: 2019/06/04 10:48:06 by event            ###   ########.fr       */
+/*   Updated: 2019/06/04 11:46:31 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n)
 	{
 		i++;
 	}
+	if (n == 0 || i == n)
+		return (0);
+	if (!str1 || !str2)
+		return (0);
 	if (str1[i] == str2[i])
 		return (0);
 	else
