@@ -6,7 +6,7 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 11:59:38 by no-conne          #+#    #+#             */
-/*   Updated: 2019/06/05 12:32:07 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/06/05 12:39:48 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list *new;
 	t_list *cpy;
 	t_list *start;
-	
+
 	if (!lst || !f)
 		return (NULL);
 	cpy = f(lst);
