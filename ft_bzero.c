@@ -6,20 +6,20 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:31:09 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/30 12:22:15 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/06/06 08:51:04 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t			i;
 
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)str)[i] = '\0';
+		((unsigned char *)s)[i] = '\0';
 		i++;
 	}
 }

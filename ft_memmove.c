@@ -6,21 +6,21 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:15:27 by no-conne          #+#    #+#             */
-/*   Updated: 2019/05/23 13:01:02 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/06/06 08:59:06 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *str1, const void *str2, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t				i;
 	unsigned char		*astr1;
 	const unsigned char	*astr2;
 
-	i = n;
-	astr1 = str1;
-	astr2 = str2;
+	i = len;
+	astr1 = dst;
+	astr2 = src;
 	if (astr2 < astr1)
 	{
 		while (i--)
@@ -29,6 +29,6 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 		}
 	}
 	else
-		ft_memcpy(str1, str2, n);
+		ft_memcpy(dst, src, len);
 	return (astr1);
 }

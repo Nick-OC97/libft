@@ -6,7 +6,7 @@
 #    By: no-conne <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 12:49:23 by no-conne          #+#    #+#              #
-#    Updated: 2019/05/23 12:32:52 by no-conne         ###   ########.fr        #
+#    Updated: 2019/06/06 10:14:59 by no-conne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ $(NAME):
 	$(CC) $(CFLAGS) -c  $(SOURCES)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
-	rm -f $(OBJECTS)
 
 clean:
 	rm -f $(OBJECTS)
