@@ -6,7 +6,7 @@
 #    By: no-conne <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 12:49:23 by no-conne          #+#    #+#              #
-#    Updated: 2019/06/06 10:14:59 by no-conne         ###   ########.fr        #
+#    Updated: 2019/06/12 10:41:46 by no-conne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME = libft.a
 
 CC = gcc
 
-CFLAGS =  -Wall -Werror -Wextra
+IDIR = ./includes/
+
+CFLAGS =  -Wall -Werror -Wextra -I$(IDIR)
 
 SOURCES = *.c
 

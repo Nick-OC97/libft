@@ -6,11 +6,11 @@
 /*   By: no-conne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:31:09 by no-conne          #+#    #+#             */
-/*   Updated: 2019/06/06 08:51:04 by no-conne         ###   ########.fr       */
+/*   Updated: 2019/06/12 10:36:43 by no-conne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	ft_bzero(void *s, size_t n)
 {
